@@ -20,6 +20,8 @@ public class Rook extends ChessPiece {
         boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
         //above
         Position p = new Position(0,0);
+
+
         p.setValues(position.getRow() -1, position.getColumn());
         while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
